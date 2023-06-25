@@ -1,0 +1,29 @@
+.grid {
+  padding: 10px $mobilePadding 20px;
+  color: $textBlack;
+  @include e(element) {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    @include m(personal) {
+      & h1 {
+        background: -webkit-linear-gradient(45deg, #e36577, #f6edb2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: $boldFontWeight;
+        margin-top: 0;
+        font-size: 36px;
+        margin-bottom: 10px;
+      }
+      & h2 {
+        font-weight: $mediumFontWeight;
+        font-size: 24px;
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+      & p {
+        margin: 0;
+      }
+    }
+  }
+}

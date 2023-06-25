@@ -1,34 +1,30 @@
-//fonts
-$google-font: "https://fonts.googleapis.com/css?family=Ubuntu:400,500";
-$prefix: prefix- !default;
+//Fonts
+$google-font: "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap";
+$prefix: do- !default;
 $baseFontSize: 16px;
-$baseFontFamily: "Ubuntu", sans-serif;
+$baseFontFamily: "Roboto", sans-serif;
+$regularFontWeight: 400;
 $mediumFontWeight: 500;
+$boldFontWeight: 700;
 
-$mobilePadding: (12px / $baseFontSize) * 1rem;
-$desktopPadding: 1rem;
+//Paddings
+$mobilePadding: 20px;
+$tabletPadding: 30px;
 
-// Paths
-
+//Paths
 $imagesPath: "../i/";
-$fontsPath: "../fonts/";
-$usersFilesPath: "../userfiles/";
 
 // Colors
-$black: #000000;
-$white: #ffffff;
-$blue: #0d6efd !default;
-$indigo: #6610f2 !default;
-$purple: #6f42c1 !default;
-$pink: #d63384 !default;
-$red: #dc3545 !default;
+$backgroundGray: #f5f5f5 !default;
+$backgroundButtonGray: #ebebeb !default;
+$textBlack: #1d1d1d !default;
+$textGray: #6e6e6e !default;
+$borderGray: #ebebeb !default;
 
 $colors: (
-  "black": $black,
-  "white": $white,
-  "blue": $blue,
-  "indigo": $indigo,
-  "purple": $purple,
-  "pink": $pink,
-  "red": $red,
+  "backgroundGray": $backgroundGray,
+  "backgroundButtonGray": $backgroundButtonGray,
+  "textBlack": $textBlack,
+  "textGray": $textGray,
+  "borderGray": $borderGray,
 ) !default;

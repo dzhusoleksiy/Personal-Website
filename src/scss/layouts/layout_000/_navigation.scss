@@ -1,0 +1,23 @@
+.header {
+  padding: 20px $mobilePadding 10px;
+  @include e(nav-list) {
+    border-radius: 20px;
+    background-color: $backgroundButtonGray;
+    margin: 0;
+    list-style-type: none;
+    padding-inline-start: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5px;
+  }
+  @include e(nav-item) {
+    padding: 5px 10px;
+    color: $textBlack;
+    font-size: $baseFontSize;
+    font-weight: $mediumFontWeight;
+    &.active {
+      background-color: white;
+      border-radius: 20px;
+    }
+  }
+}
