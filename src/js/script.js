@@ -1,5 +1,3 @@
-// console.log("TEST");
-
 function initMobile() {
   console.log("is-mobile");
 }
@@ -35,3 +33,31 @@ ssm.addStates([
     },
   },
 ]);
+
+function handleNavigation() {
+  const navItems = document.querySelectorAll(".header__nav-item");
+  const activeIndicator = document.querySelector(".header__active-nav-item");
+  let activeItem = document.querySelector(".header__nav-item.active");
+
+  function moveIndicator() {
+    const itemOffset = activeItem.offsetLeft;
+    const itemWidth = activeItem.offsetWidth;
+    activeIndicator.style.transform = `translateX(${itemOffset}px)`;
+    activeIndicator.style.width = `${itemWidth}px`;
+  }
+
+  navItems.forEach(function (item) {
+    item.addEventListener("click", function () {
+      activeItem.classList.remove("active");
+      this.classList.add("active");
+      activeItem = this;
+      moveIndicator();
+    });
+  });
+
+  window.addEventListener("resize", function () {
+    moveIndicator();
+  });
+  moveIndicator();
+}
+handleNavigation();
