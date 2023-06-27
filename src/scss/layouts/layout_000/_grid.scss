@@ -51,10 +51,86 @@
       & p {
         display: block;
         font-weight: $boldFontWeight;
-        font-size: 92px;
+        font-size: 122px;
         color: white;
         margin: 0;
       }
+    }
+    @include m(gallery) {
+      padding: 0;
+      & img {
+        height: 280px;
+        width: 280px;
+      }
+    }
+    @include e(photos) {
+    }
+  }
+  @include e(photos) {
+    height: 280px;
+    width: 280px;
+    padding: none;
+    border-radius: 32px;
+    box-shadow: 0.2rem 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+  }
+  @include e(slider) {
+    display: flex;
+    position: relative;
+  }
+  @include e(slide) {
+    position: absolute;
+    transition: transform 0.5s;
+  }
+  @include e(slider-btn) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    border: none;
+    background: rgb(0, 0, 0, 0.3);
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+    & svg {
+      height: 20px;
+      width: 20px;
+      border-radius: 100px;
+    }
+    @include m(left) {
+      left: 16px;
+      bottom: 16px;
+    }
+    @include m(right) {
+      right: 16px;
+      bottom: 16px;
+    }
+  }
+  @include e(slider-dots) {
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @include e(slider-dot) {
+    border: none;
+    background-color: #e6e6e6;
+    opacity: 0.4;
+    height: 8px;
+    width: 8px;
+    border-radius: 100px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+    box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.8);
+    &:last-child {
+      margin: 0;
+    }
+    @include m(active) {
+      background-color: #e6e6e6;
+      opacity: 1;
     }
   }
 }
