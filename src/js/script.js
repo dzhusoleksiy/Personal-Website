@@ -136,20 +136,12 @@ dotContainer.addEventListener(`click`, function (event) {
   }
 });
 
-function confirmVisit(albumName, spotifyLink) {
-  var confirmation = confirm("Do you want to visit the Spotify page of " + albumName + "?");
-  if (confirmation) {
-    window.open(spotifyLink, "_blank");
-  }
-}
 
 function confirmVisit(albumName) {
-  var confirmation = confirm("This is the part of my website portfolio where I let some bits of my personality slip in. I really like this album. Do you want to visit the Spotify page of " + albumName + ", though?");
+  var confirmation = confirm("It's that part of my website-portfolio where I let some bits of my personality slip in. I really like this album. Do you want to visit the Spotify page of " + albumName + ", though?");
   if (confirmation) {
-    // User confirmed, open Spotify page
     return true;
   } else {
-    // User canceled, prevent opening Spotify page
     event.preventDefault();
     return false;
   }

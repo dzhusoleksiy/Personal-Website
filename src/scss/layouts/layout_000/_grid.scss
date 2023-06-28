@@ -5,6 +5,7 @@
   gap: $mobilePadding;
   @include e(element) {
     background-color: white;
+    position: relative;
     border-radius: 20px;
     padding: $mobilePadding;
     margin-left: auto;
@@ -75,14 +76,13 @@
         font-weight: $mediumFontWeight;
         font-size: 24px;
         margin-top: 0;
-        margin-bottom: 15px;
+        margin-bottom: 35px;
         color: $textBlack;
       }
       & p {
         color: $textBlack;
-        line-height: 1.25;
         margin-top: 0;
-        margin-bottom: 15px;
+        margin-bottom: 35px;
         font-weight: $regularFontWeight;
         &:last-child {
           margin-bottom: 0;
@@ -90,7 +90,16 @@
       }
     }
     @include m(electon) {
-      height: 560px;
+      height: 580px;
+    }
+    @include m(film-catalog) {
+      height: 580px;
+    }
+    @include m(payment-form) {
+      height: 580px;
+    }
+    @include m(task-list) {
+      height: 580px;
     }
   }
   @include e(photos) {
@@ -177,28 +186,29 @@
     color: $textBlack;
     -webkit-text-fill-color: initial;
   }
-  @include e(electon-description) {
+  @include e(project-description) {
     & h3 {
       font-weight: $mediumFontWeight;
       font-size: 24px;
       margin-top: 0;
-      margin-bottom: 25px;
+      margin-bottom: 35px;
       color: $textBlack;
     }
     & p {
       margin-top: 0;
-      margin-bottom: 39px;
+      margin-bottom: 49px;
       color: $textBlack;
     }
+    @include m(personal-website) {
+      & p {
+        margin-bottom: 56px;
+      }
+    }
   }
-  @include e(electon-buttons) {
+  @include e(project-buttons) {
     text-align: center;
     & button {
       margin-bottom: 52px;
-      transition: transform 0.5s ease;
-      &:hover {
-        transform: scale(1.1);
-      }
       &:last-child {
         margin-bottom: 38px;
       }
@@ -213,14 +223,30 @@
       }
     }
   }
-  @include e(electon-screenshot) {
+  @include e(project-screenshot) {
     width: 240px;
-    height: 204.95px;
     display: flex;
     align-items: center;
+    height: 210px;
     & img {
       width: 100%;
       max-width: 100%;
+      height: 210px;
+      object-fit: contain;
+    }
+    @include m(film-catalog) {
+      height: 220px;
+      width: 140px;
+      margin-left: -4px;
+      & img {
+        height: 220px;
+      }
+    }
+    @include m(payment-form) {
+      height: 180px;
+      & img {
+        height: 220px;
+      }
     }
   }
 }
