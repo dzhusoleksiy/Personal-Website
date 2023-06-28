@@ -30,9 +30,11 @@
         font-size: 24px;
         margin-top: 0;
         margin-bottom: 15px;
+        color: $textBlack;
       }
       & p {
         margin: 0;
+        color: $textBlack;
       }
     }
     @include m(cv) {
@@ -74,11 +76,21 @@
         font-size: 24px;
         margin-top: 0;
         margin-bottom: 15px;
+        color: $textBlack;
       }
       & p {
-        line-height: 1.5;
-        margin: 0;
+        color: $textBlack;
+        line-height: 1.25;
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-weight: $regularFontWeight;
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
+    }
+    @include m(electon) {
+      height: 560px;
     }
   }
   @include e(photos) {
@@ -108,7 +120,7 @@
     padding: 8px;
     border-radius: 50%;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.5s;
     & svg {
       height: 20px;
       width: 20px;
@@ -158,11 +170,57 @@
     background: linear-gradient(to right, #6293e2, #6fe3fa);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-weight: $mediumFontWeight; 
+    font-weight: $mediumFontWeight;
   }
   @include e(default-skills) {
     font-weight: $regularFontWeight;
     color: $textBlack;
     -webkit-text-fill-color: initial;
+  }
+  @include e(electon-description) {
+    & h3 {
+      font-weight: $mediumFontWeight;
+      font-size: 24px;
+      margin-top: 0;
+      margin-bottom: 25px;
+      color: $textBlack;
+    }
+    & p {
+      margin-top: 0;
+      margin-bottom: 39px;
+      color: $textBlack;
+    }
+  }
+  @include e(electon-buttons) {
+    text-align: center;
+    & button {
+      margin-bottom: 52px;
+      transition: transform 0.5s ease;
+      &:hover {
+        transform: scale(1.1);
+      }
+      &:last-child {
+        margin-bottom: 38px;
+      }
+      & a {
+        font-size: rem(14px);
+        font-weight: $boldFontWeight;
+        text-decoration: none;
+        color: $textBlack;
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: 5px solid $borderGray;
+      }
+    }
+  }
+  @include e(electon-screenshot) {
+    width: 240px;
+    height: 204.95px;
+    display: flex;
+    align-items: center;
+    & img {
+      width: 100%;
+      max-width: 100%;
+    }
   }
 }

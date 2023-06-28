@@ -144,7 +144,7 @@ function confirmVisit(albumName, spotifyLink) {
 }
 
 function confirmVisit(albumName) {
-  var confirmation = confirm("I really like this album, but are you sure you want to visit the Spotify page of " + albumName + "?");
+  var confirmation = confirm("This is the part of my website portfolio where I let some bits of my personality slip in. I really like this album. Do you want to visit the Spotify page of " + albumName + ", though?");
   if (confirmation) {
     // User confirmed, open Spotify page
     return true;
