@@ -136,4 +136,26 @@ dotContainer.addEventListener(`click`, function (event) {
   }
 });
 
+function confirmVisit(albumName, spotifyLink) {
+  var confirmation = confirm("Do you want to visit the Spotify page of " + albumName + "?");
+  if (confirmation) {
+    window.open(spotifyLink, "_blank");
+  }
+}
+
+function confirmVisit(albumName) {
+  var confirmation = confirm("I really like this album, but are you sure you want to visit the Spotify page of " + albumName + "?");
+  if (confirmation) {
+    // User confirmed, open Spotify page
+    return true;
+  } else {
+    // User canceled, prevent opening Spotify page
+    event.preventDefault();
+    return false;
+  }
+}
+
+
+
+
 
