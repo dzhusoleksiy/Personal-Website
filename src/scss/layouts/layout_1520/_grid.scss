@@ -1,60 +1,167 @@
 .grid {
-    grid-template-columns: repeat(5, minmax(280px, 20px));
-    grid-template-rows: repeat(4, minmax(280px, 20px));
-    width: 1520px;
-    @include e(element) {
-      @include m(personal) {
-        grid-column: 2;
-        grid-row: 1;
-      }
-      @include m(cv) {
-        grid-column: 3;
-        grid-row: 1;
-      }
-      @include m(gallery) {
-        grid-column: 4;
-        grid-row: 1;
-      }
-      @include m(skills) {
-        grid-column: 1;
-        grid-row: 2 / 3;
-      }
-      @include m(electon) {
-        grid-column: 2;
-        grid-row: 2 / 3;
-      }
-      @include m(film-catalog) {
-        grid-column: 3;
-        grid-row: 2 / 3;
-      }
-      @include m(payment-form) {
-        grid-column: 4;
-        grid-row: 2 / 3;
-      }
-      @include m(task-list) {
-        grid-column: 5;
-        grid-row: 2 / 3;
-      }
-      @include m(personal-website) {
-        grid-column: 1;
-        grid-row: 4;
-      }
-      @include m(announcement) {
-        grid-column: 5;
-        grid-row: 4;
-      }
-      @include m(linkedin) {
-        grid-column: 2;
-        grid-row: 4;
-      }
-      @include m(github) {
-        grid-column: 3;
-        grid-row: 4;
-      }
-      @include m(telegram) {
-        grid-column: 4;
-        grid-row: 4;
-      }
+  grid-template-columns: repeat(5, minmax(280px, 20px));
+  grid-template-rows: repeat(4, minmax(280px, 20px));
+  width: 1520px;
+  @include e(element) {
+    @include m(personal) {
+      grid-column: 2;
+      grid-row: 1;
+    }
+    @include m(cv) {
+      grid-column: 3;
+      grid-row: 1;
+    }
+    @include m(gallery) {
+      grid-column: 4;
+      grid-row: 1;
+    }
+    @include m(skills) {
+      grid-column: 1;
+      grid-row: 2 / 3;
+    }
+    @include m(electon) {
+      grid-column: 2;
+      grid-row: 2 / 3;
+    }
+    @include m(film-catalog) {
+      grid-column: 3;
+      grid-row: 2 / 3;
+    }
+    @include m(payment-form) {
+      grid-column: 4;
+      grid-row: 2 / 3;
+    }
+    @include m(task-list) {
+      grid-column: 5;
+      grid-row: 2 / 3;
+    }
+    @include m(personal-website) {
+      grid-column: 1;
+      grid-row: 4;
+    }
+    @include m(announcement) {
+      grid-column: 5;
+      grid-row: 4;
+    }
+    @include m(linkedin) {
+      grid-column: 2;
+      grid-row: 4;
+    }
+    @include m(github) {
+      grid-column: 3;
+      grid-row: 4;
+    }
+    @include m(telegram) {
+      grid-column: 4;
+      grid-row: 4;
     }
   }
-  
+}
+.grid-projects {
+  & .grid__element_personal {
+    grid-column: 2;
+    grid-row: 4;
+  }
+  & .grid__element_cv {
+    grid-column: 3;
+    grid-row: 4;
+  }
+  & .grid__element_gallery {
+    grid-column: 4;
+    grid-row: 4;
+  }
+  & .grid__element_skills {
+    grid-column: 1;
+    grid-row: 1 / 2;
+  }
+  & .grid__element_electon {
+    grid-column: 2;
+    grid-row: 1 / 2;
+  }
+  & .grid__element_film-catalog {
+    grid-column: 3;
+    grid-row: 1 / 2;
+  }
+  & .grid__element_payment-form {
+    grid-column: 4;
+    grid-row: 1 / 2;
+  }
+  & .grid__element_task-list {
+    grid-column: 5;
+    grid-row: 1 / 2;
+  }
+  & .grid__element_personal-website {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  & .grid__element_announcement {
+    grid-column: 5;
+    grid-row: 3;
+  }
+  & .grid__element_linkedin {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  & .grid__element_github {
+    grid-column: 3;
+    grid-row: 3;
+  }
+  & .grid__element_telegram {
+    grid-column: 4;
+    grid-row: 3;
+  }
+}
+.grid-contact {
+  & .grid__element_personal {
+    grid-column: 2;
+    grid-row: 4;
+  }
+  & .grid__element_cv {
+    grid-column: 3;
+    grid-row: 4;
+  }
+  & .grid__element_gallery {
+    grid-column: 4;
+    grid-row: 4;
+  }
+  & .grid__element_skills {
+    grid-column: 1;
+    grid-row: 2 / 3;
+  }
+  & .grid__element_electon {
+    grid-column: 2;
+    grid-row: 2 / 3;
+  }
+  & .grid__element_film-catalog {
+    grid-column: 3;
+    grid-row: 2 / 3;
+  }
+  & .grid__element_payment-form {
+    grid-column: 4;
+    grid-row: 2 / 3;
+  }
+  & .grid__element_task-list {
+    grid-column: 5;
+    grid-row: 2 / 3;
+  }
+  & .grid__element_personal-website {
+    grid-column: 1;
+    grid-row: 4;
+  }
+  & .grid__element_announcement {
+    grid-column: 5;
+    grid-row: 4;
+  }
+  & .grid__element_linkedin {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  & .grid__element_github {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  & .grid__element_telegram {
+    grid-column: 4;
+    grid-row: 1;
+  }
+}

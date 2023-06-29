@@ -63,6 +63,80 @@ function handleNavigation() {
 }
 handleNavigation();
 
+const grid = document.querySelector(`.grid`);
+const personal = document.querySelector(`.grid__element_personal`);
+const cv = document.querySelector(`.grid__element_cv`);
+const gallery = document.querySelector(`.grid__element_gallery`);
+const skills = document.querySelector(`.grid__element_skills`);
+const electon = document.querySelector(`.grid__element_electon`);
+const filmCatalog = document.querySelector(`.grid__element_film-catalog`);
+const paymentForm = document.querySelector(`.grid__element_payment-form`);
+const taskList = document.querySelector(`.grid__element_task-list`);
+const personalWebsite = document.querySelector(
+  `.grid__element_personal-website`
+);
+const announcement = document.querySelector(`.grid__element_announcement`);
+const linkedin = document.querySelector(`.grid__element_linkedin`);
+const github = document.querySelector(`.grid__element_github`);
+const telegram = document.querySelector(`.grid__element_telegram`);
+
+const everything = document.querySelector(`.header__nav-item_everything`);
+everything.addEventListener("click", function () {
+  grid.classList.remove("grid-projects");
+  grid.classList.remove("grid-contact");
+  personal.classList.remove("dimmed");
+  cv.classList.remove("dimmed");
+  gallery.classList.remove("dimmed");
+  skills.classList.remove("dimmed");
+  electon.classList.remove("dimmed");
+  filmCatalog.classList.remove("dimmed");
+  paymentForm.classList.remove("dimmed");
+  taskList.classList.remove("dimmed");
+  personalWebsite.classList.remove("dimmed");
+  announcement.classList.remove("dimmed");
+  linkedin.classList.remove("dimmed");
+  github.classList.remove("dimmed");
+  telegram.classList.remove("dimmed");
+});
+
+const projects = document.querySelector(`.header__nav-item_projects`);
+projects.addEventListener("click", function () {
+  grid.classList.remove("grid-contact");
+  grid.classList.add("grid-projects");
+  personal.classList.add("dimmed");
+  cv.classList.add("dimmed");
+  gallery.classList.add("dimmed");
+  skills.classList.remove("dimmed");
+  electon.classList.remove("dimmed");
+  filmCatalog.classList.remove("dimmed");
+  paymentForm.classList.remove("dimmed");
+  taskList.classList.remove("dimmed");
+  personalWebsite.classList.remove("dimmed");
+  announcement.classList.remove("dimmed");
+  linkedin.classList.add("dimmed");
+  github.classList.add("dimmed");
+  telegram.classList.add("dimmed");
+});
+
+const contact = document.querySelector(`.header__nav-item_contact`);
+contact.addEventListener("click", function () {
+  grid.classList.add("grid-contact");
+  grid.classList.remove("grid-projects");
+  personal.classList.add("dimmed");
+  cv.classList.add("dimmed");
+  gallery.classList.add("dimmed");
+  skills.classList.add("dimmed");
+  electon.classList.add("dimmed");
+  filmCatalog.classList.add("dimmed");
+  paymentForm.classList.add("dimmed");
+  taskList.classList.add("dimmed");
+  personalWebsite.classList.add("dimmed");
+  announcement.classList.add("dimmed");
+  linkedin.classList.remove("dimmed");
+  github.classList.remove("dimmed");
+  telegram.classList.remove("dimmed");
+});
+
 //Gallery
 const slides = document.querySelectorAll(`.grid__slide`);
 const buttonLeft = document.querySelector(`.grid__slider-btn_left`);
@@ -86,7 +160,7 @@ const createDots = function () {
 const activeDot = function (slide) {
   document
     .querySelectorAll(`.grid__slider-dot`)
-    .forEach(dot => dot.classList.remove(`grid__slider-dot_active`));
+    .forEach((dot) => dot.classList.remove(`grid__slider-dot_active`));
   document
     .querySelector(`.grid__slider-dot[data-slide="${slide}"]`)
     .classList.add(`grid__slider-dot_active`);
@@ -136,9 +210,12 @@ dotContainer.addEventListener(`click`, function (event) {
   }
 });
 
-
 function confirmVisit(albumName) {
-  var confirmation = confirm("It's that part of my website-portfolio where I let some bits of my personality slip in. I really like this album. Do you want to visit the Spotify page of " + albumName + ", though?");
+  var confirmation = confirm(
+    "It's that part of my website-portfolio where I let some bits of my personality slip in. I really like this album. Do you want to visit the Spotify page of " +
+      albumName +
+      ", though?"
+  );
   if (confirmation) {
     return true;
   } else {
@@ -146,8 +223,3 @@ function confirmVisit(albumName) {
     return false;
   }
 }
-
-
-
-
-

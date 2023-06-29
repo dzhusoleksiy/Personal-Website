@@ -77,3 +77,111 @@
     }
   }
 }
+.grid-projects {
+  & .grid__element_personal {
+    grid-column: 4;
+    grid-row: 4;
+  }
+  & .grid__element_cv {
+    grid-column: 1;
+    grid-row: 5;
+  }
+  & .grid__element_gallery {
+    grid-column: 2;
+    grid-row: 5;
+  }
+  & .grid__element_skills {
+    grid-column: 1;
+    grid-row: 1 / 2;
+  }
+  & .grid__element_electon {
+    grid-column: 2;
+    grid-row: 1 / 2;
+  }
+  & .grid__element_film-catalog {
+    grid-column: 3;
+    grid-row: 1 / 2;
+  }
+  & .grid__element_payment-form {
+    grid-column: 4;
+    grid-row: 1 / 2;
+  }
+  & .grid__element_task-list {
+    grid-column: 1;
+    grid-row: 3 / 4;
+  }
+  & .grid__element_personal-website {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  & .grid__element_announcement {
+    grid-column: 2;
+    grid-row: 4;
+  }
+  & .grid__element_linkedin {
+    grid-column: 3;
+    grid-row: 3;
+  }
+  & .grid__element_github {
+    grid-column: 3;
+    grid-row: 4;
+  }
+  & .grid__element_telegram {
+    grid-column: 4;
+    grid-row: 3;
+  }
+}
+.grid-contact {
+  & .grid__element_personal {
+    grid-column: 2;
+    grid-row: 4;
+  }
+  & .grid__element_cv {
+    grid-column: 1;
+    grid-row: 5;
+  }
+  & .grid__element_gallery {
+    grid-column: 2;
+    grid-row: 5;
+  }
+  & .grid__element_skills {
+    grid-column: 4;
+    grid-row: 1 / 2;
+  }
+  & .grid__element_electon {
+    grid-column: 1;
+    grid-row: 2 / 3;
+  }
+  & .grid__element_film-catalog {
+    grid-column: 2;
+    grid-row: 2 / 3;
+  }
+  & .grid__element_payment-form {
+    grid-column: 3;
+    grid-row: 2 / 3;
+  }
+  & .grid__element_task-list {
+    grid-column: 4;
+    grid-row: 3 / 4;
+  }
+  & .grid__element_personal-website {
+    grid-column: 1;
+    grid-row: 4;
+  }
+  & .grid__element_announcement {
+    grid-column: 3;
+    grid-row: 4;
+  }
+  & .grid__element_linkedin {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  & .grid__element_github {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  & .grid__element_telegram {
+    grid-column: 3;
+    grid-row: 1;
+  }
+}

@@ -1,3 +1,7 @@
+.dimmed {
+  opacity: 0.2;
+  transition: opacity 1s ease;
+}
 .grid {
   padding: 10px $mobilePadding 20px;
   color: $textBlack;
@@ -7,6 +11,7 @@
   margin-right: auto;
   @include e(element) {
     background-color: white;
+    transition: opacity 1s ease;
     overflow: hidden;
     position: relative;
     border-radius: 20px;
@@ -315,5 +320,91 @@
       border-radius: 100px;
       margin: 0;
     }
+  }
+}
+.grid-projects {
+  grid-template-columns: repeat(1, minmax(280px, 20px));
+  grid-template-rows: repeat(18, minmax(280px, 20px));
+  & .grid__element_personal {
+    grid-row: 16;
+  }
+  & .grid__element_cv {
+    grid-row: 17;
+  }
+  & .grid__element_gallery {
+    grid-row: 18;
+  }
+  & .grid__element_skills {
+    grid-row: 1 / 2;
+  }
+  & .grid__element_electon {
+    grid-row: 3 / 4;
+  }
+  & .grid__element_film-catalog {
+    grid-row: 5 / 6;
+  }
+  & .grid__element_payment-form {
+    grid-row: 7 / 8;
+  }
+  & .grid__element_task-list {
+    grid-row: 9 / 10;
+  }
+  & .grid__element_personal-website {
+    grid-row: 11;
+  }
+  & .grid__element_announcement {
+    grid-row: 12;
+  }
+  & .grid__element_linkedin {
+    grid-row: 13;
+  }
+  & .grid__element_github {
+    grid-row: 14;
+  }
+  & .grid__element_telegram {
+    grid-row: 15;
+  }
+}
+.grid-contact {
+  grid-template-columns: repeat(1, minmax(280px, 20px));
+  grid-template-rows: repeat(18, minmax(280px, 20px));
+  & .grid__element_personal {
+    grid-row: 16;
+  }
+  & .grid__element_cv {
+    grid-row: 17;
+  }
+  & .grid__element_gallery {
+    grid-row: 18;
+  }
+  & .grid__element_skills {
+    grid-row: 4 / 5;
+  }
+  & .grid__element_electon {
+    grid-row: 6 / 7;
+  }
+  & .grid__element_film-catalog {
+    grid-row: 8 / 9;
+  }
+  & .grid__element_payment-form {
+    grid-row: 10 / 11;
+  }
+  & .grid__element_task-list {
+    grid-row: 12 / 13;
+  }
+  & .grid__element_personal-website {
+    grid-row: 14;
+  }
+  & .grid__element_announcement {
+    grid-row: 15;
+  }
+  & .grid__element_linkedin {
+    grid-row: 1;
+  }
+  & .grid__element_github {
+    grid-row: 2;
+  }
+  & .grid__element_telegram {
+    grid-row: 3;
   }
 }

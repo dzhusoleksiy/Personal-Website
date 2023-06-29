@@ -1,4 +1,5 @@
 .header {
+  user-select: none;
   padding: 20px $mobilePadding 10px;
   @include e(nav) {
     position: relative;
