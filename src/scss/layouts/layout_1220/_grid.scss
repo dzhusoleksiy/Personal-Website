@@ -1,0 +1,79 @@
+.grid {
+  grid-template-columns: repeat(4, minmax(280px, 20px));
+  grid-template-rows: repeat(5, minmax(280px, 20px));
+  width: 1220px;
+  @include e(element) {
+    @include m(personal) {
+      grid-column: 1;
+      grid-row: 1;
+    }
+    @include m(cv) {
+      grid-column: 2;
+      grid-row: 1;
+    }
+    @include m(gallery) {
+      grid-column: 3;
+      grid-row: 1;
+    }
+    @include m(skills) {
+      grid-column: 4;
+      grid-row: 1 / 2;
+    }
+    @include m(electon) {
+      grid-column: 1;
+      grid-row: 2 / 3;
+    }
+    @include m(film-catalog) {
+      grid-column: 2;
+      grid-row: 2 / 3;
+    }
+    @include m(payment-form) {
+      grid-column: 3;
+      grid-row: 2 / 3;
+    }
+    @include m(task-list) {
+      grid-column: 4;
+      grid-row: 3 / 4;
+    }
+    @include m(personal-website) {
+      grid-column: 1;
+      grid-row: 4;
+    }
+    @include m(announcement) {
+      grid-column: 3;
+      grid-row: 4;
+    }
+    @include m(linkedin) {
+      grid-column: 1;
+      grid-row: 5;
+    }
+    @include m(github) {
+      grid-column: 2;
+      grid-row: 4;
+    }
+    @include m(telegram) {
+      grid-column: 2;
+      grid-row: 5;
+    }
+  }
+  @include e(slider-btn) {
+    transition: all 0.5s;
+    &:hover {
+      box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.5);
+    }
+  }
+  @include e(project-buttons) {
+    & button {
+      transition: transform 0.5s ease;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  @include e(arrow-button) {
+    transition: all 0.5s;
+    &:hover {
+      box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.5);
+    }
+  }
+}

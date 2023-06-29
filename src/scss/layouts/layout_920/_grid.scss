@@ -1,0 +1,59 @@
+.grid {
+  grid-template-columns: repeat(3, minmax(280px, 20px));
+  grid-template-rows: repeat(6, minmax(280px, 20px));
+  width: 920px;
+  @include e(element) {
+    @include m(personal) {
+      grid-column: 1;
+      grid-row: 1;
+    }
+    @include m(cv) {
+      grid-column: 2;
+      grid-row: 1;
+    }
+    @include m(gallery) {
+      grid-column: 3;
+      grid-row: 1;
+    }
+    @include m(skills) {
+      grid-column: 1;
+      grid-row: 2 / 3;
+    }
+    @include m(electon) {
+      grid-column: 2;
+      grid-row: 2 / 3;
+    }
+    @include m(film-catalog) {
+      grid-column: 3;
+      grid-row: 2 / 3;
+    }
+    @include m(payment-form) {
+      grid-column: 1;
+      grid-row: 4 / 5;
+    }
+    @include m(task-list) {
+      grid-column: 2;
+      grid-row: 4 / 5;
+    }
+    @include m(personal-website) {
+      grid-column: 3;
+      grid-row: 4;
+    }
+    @include m(announcement) {
+      grid-column: 3;
+      grid-row: 5;
+    }
+    @include m(linkedin) {
+      grid-column: 1;
+      grid-row: 6;
+    }
+    @include m(github) {
+      grid-column: 2;
+      grid-row: 6;
+    }
+    @include m(telegram) {
+      grid-column: 3;
+      grid-row: 6;
+    }
+  }
+}
