@@ -78,17 +78,13 @@
         font-weight: $mediumFontWeight;
         font-size: 24px;
         margin-top: 0;
-        margin-bottom: 35px;
+        margin-bottom: 15px;
         color: $textBlack;
       }
       & p {
         color: $textBlack;
-        margin-top: 0;
-        margin-bottom: 35px;
+        margin: 0;
         font-weight: $regularFontWeight;
-        &:last-child {
-          margin-bottom: 0;
-        }
       }
     }
     @include m(electon) {
@@ -238,18 +234,32 @@
     color: $textBlack;
     -webkit-text-fill-color: initial;
   }
+  @include e(sticker) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 145px;
+    & img {
+      margin-top: 22.5px;
+      width: 125px;
+    }
+  }
   @include e(project-description) {
     & h3 {
       font-weight: $mediumFontWeight;
       font-size: 24px;
       margin-top: 0;
-      margin-bottom: 35px;
+      margin-bottom: 10px;
       color: $textBlack;
     }
     & p {
       margin-top: 0;
-      margin-bottom: 49px;
+      margin-bottom: 10px;
       color: $textBlack;
+      &:last-child {
+        color: $textGray;
+        font-size: rem(14px);
+      }
     }
     @include m(personal-website) {
       & p {
@@ -259,10 +269,14 @@
   }
   @include e(project-buttons) {
     text-align: center;
+    position: absolute;
+    margin-top: 20px;
+    bottom: 34px;
+    margin-left: -20px;
     & button {
-      margin-bottom: 52px;
+      margin-bottom: 39px;
       &:last-child {
-        margin-bottom: 38px;
+        margin-bottom: 0;
       }
       & a {
         font-size: rem(14px);
@@ -279,19 +293,20 @@
     width: 240px;
     display: flex;
     align-items: center;
-    height: 210px;
     & img {
       width: 100%;
       max-width: 100%;
-      height: 210px;
       object-fit: contain;
     }
-    @include m(film-catalog) {
-      height: 220px;
-      width: 140px;
-      margin-left: -4px;
+    @include m(electon) {
       & img {
-        height: 220px;
+        height: 190px;
+      }
+    }
+    @include m(film-catalog) {
+      margin-top: 24px;
+      & img {
+        height: 190px;
       }
     }
     @include m(payment-form) {
