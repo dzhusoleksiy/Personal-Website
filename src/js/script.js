@@ -223,3 +223,11 @@ function confirmVisit(albumName) {
     return false;
   }
 }
+
+window.addEventListener("load", function () {
+  if (navigator.userAgent.match(/chrome|chromium|crios/i)) {
+    document.documentElement.classList.add("scrollbar");
+  } else {
+    return;
+  }
+});
